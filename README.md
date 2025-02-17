@@ -117,7 +117,7 @@ Explain if any improvments can be made to the prototype
 
 # Code
 ### sql connection
-```
+```C#
 string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\billy\\OneDrive - Middlesbrough College\\C#\\SimpleWeatherApiExample\\SimpleWeatherApi\\SaveDB.mdf\";Integrated Security=True;Connect Timeout=30";
 
 SqlConnection sqlConnection = new SqlConnection(ConnectionString);
@@ -125,7 +125,7 @@ SqlCommand command = new SqlCommand("SaveForecast", sqlConnection);
 command.CommandType = CommandType.StoredProcedure;
 ```
 ### API connection
-```
+```C#
 private const string API_KEY = "b1fe4659e300363e368f4ce2cf007fac";
 location = txtCity.Text;
 WebClient client = new WebClient();
@@ -137,7 +137,7 @@ DisplayForecast(client.DownloadString(ForecastUrl));
 ```
 
 ### Output API data
-```
+```C#
 DataTable dt = new DataTable();
 
 XmlDocument xmlDoc = new XmlDocument();
