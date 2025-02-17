@@ -117,4 +117,10 @@ Explain if any improvments can be made to the prototype
 
 # Code
 ### sql connection
-``` Code Block ```
+```
+string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\billy\\OneDrive - Middlesbrough College\\C#\\SimpleWeatherApiExample\\SimpleWeatherApi\\SaveDB.mdf\";Integrated Security=True;Connect Timeout=30";
+
+SqlConnection sqlConnection = new SqlConnection(ConnectionString);
+SqlCommand command = new SqlCommand("SaveForecast", sqlConnection);
+command.CommandType = CommandType.StoredProcedure;
+```
