@@ -60,3 +60,26 @@ Make sure to explain why I have designed it the way I have
 Show how data is organized in a system
 #### Test stratagey
 Show how I'm going to test the programme
+
+# Task 2
+### Developing a prototype
+
+#### Test
+Iterative testing  
+Test as im making  
+Final test  
+Use different data types  
+Erroneus, Normal and extreme
+#### Document
+Document the making process  
+Testing
+#### 2+ Laungages
+My choices:  
+C#, SQL
+#### acessability
+Make sure it is usable fore evryone/target audience  
+Make sure it is easy to navigate
+#### GDPR
+Make sure it follows legal and ethical considerations  
+
+
