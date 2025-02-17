@@ -82,4 +82,32 @@ Make sure it is easy to navigate
 #### GDPR
 Make sure it follows legal and ethical considerations  
 
+# Task 3A
+### User Feedback
+#### FeedBack plan
+What people are going to as about my prototype  
+Introduction  
+Wasy to collect data  
+Form questions  
+Interview questions
+#### Google forms
+Open ended questions  
+Ask about functionality  
+Ask about navigation
+#### Interviews
+Interview people on my prototype
+#### recording of prototype
+Recording of me using the prototype to show people im going to interview
+#### Report
+Introduction  
+Data methodoligy  
+Findings  
+Conclusion
+#### Graphs
+From google forms
+#### Non-Technical audience
+People to see if they can use the programme easily and smoothly
+#### technical audience
+People to see if all the functions work properly
+
 
