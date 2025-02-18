@@ -31,7 +31,7 @@
 - territorial restrictions  
 - system security  
 - equality and diversity 
-
+#
 # Task 1B
 ### Design
 #### ERD
@@ -60,7 +60,7 @@
 - Show how data is organized in a system
 #### Test stratagey
 - Show how I'm going to test the programme
-
+#
 # Task 2
 ### Developing a prototype
 
@@ -81,7 +81,7 @@
 - Make sure it is easy to navigate
 #### GDPR
 - Make sure it follows legal and ethical considerations  
-
+#
 # Task 3A
 ### User Feedback
 #### FeedBack plan
@@ -109,12 +109,12 @@
 - People to see if they can use the programme easily and smoothly
 #### technical audience
 - People to see if all the functions work properly
-
+#
 # Task 3B
 ### Evaluation
 - Evauate on the feedback gathered  
 - Explain if any improvments can be made to the prototype
-
+#
 # Code
 ### sql connection
 ```C#
@@ -169,5 +169,54 @@ foreach (XmlNode timeNode in xmlDoc.SelectNodes("//time"))
     dt.Rows.Add(time.DayOfWeek.ToString(), time.ToShortTimeString(), wind.ToString() + "m/s", rain.ToString() + "%", Temp.ToString() + "°C");
 
     dataGridView1.DataSource = dt;
+
+```
+### Data Table
+
+```C#
+string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\M2301290\\billy\\OneDrive - Middlesbrough College\\C#\\Hospital\\HospitalDB.mdf\";Integrated Security=True;Connect Timeout=30";
+
+SqlConnection sqlConnection = new SqlConnection(connectionString);
+
+
+SqlCommand cmd = new SqlCommand("GetPatientDetails", sqlConnection);
+
+cmd.CommandType = CommandType.StoredProcedure;
+
+SqlDataAdapter sd = new SqlDataAdapter(cmd);
+
+DataTable dt = new DataTable();
+
+sqlConnection.Open();
+
+sd.Fill(dt);
+
+sqlConnection.Close();
+
+//Read rows of database and extract fields
+
+
+foreach (DataRow dr in dt.Rows)
+
+{
+
+    int personId = (int)(dr["Id"]);
+
+    string personFirstName = (string)(dr["FirstName"]);
+
+    string personLastName = (string)(dr["LastName"]);
+
+    string personDOB = (string)(dr["DOB"]);
+
+    string PersonNumber = (string)(dr["Number"]);
+
+    string PersonAddress = (string)(dr["Address"]);
+
+    string PersonEmail = (string)(dr["Email"]);
+
+    string personDoctor = (string)(dr["Doctor"]);
+
+    txtPatients.AppendText(personId + "\t" + personFirstName + "\t" + personLastName + "\t" + personDOB + "\t" + PersonNumber.ToString() + "\t" + PersonAddress + "\t" + PersonEmail + "\t" + personDoctor + Environment.NewLine);
+}
 
 ```
