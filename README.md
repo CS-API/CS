@@ -220,3 +220,30 @@ foreach (DataRow dr in dt.Rows)
 }
 
 ```
+#
+# Checklist
+### Task 1
+#### Proposal
+- Business context
+- Functional and non functional requirements
+- Decompisition
+- API
+- Proposal:
+- Research
+- How it meets user and client needs
+- Risks
+- Regulatory and legal requirments
+- Appendix
+#### Design
+- Visual/Interface Designs
+- Data requirments
+- Algorithms
+- Test stratagey
+- Use case
+- DFD
+- ERD
+### Task 2
+#### Code
+- 2 laungages
+- Iterative Testing
+
