@@ -224,16 +224,45 @@ foreach (DataRow dr in dt.Rows)
 # Checklist
 ### Task 1
 #### Proposal
-- Business context
-- Functional and non functional requirements
-- Decompisition
-- API
-- Proposal:
-- Research
-- How it meets user and client needs
-- Risks
-- Regulatory and legal requirments
-- Appendix
+- Proposal Overview  
+  - outline Digital solution
+  - Key objectives
+- Key requirments of the breif
+  - Interactive teaching and learning resources
+  - Encouragemebt of wider learning
+  - support for assessment and monitoring
+  - collaborative tools for teaching and learning
+  - accessibilty features for a diverse user base
+  - A reward system for learning
+  - elements of gamified learning
+- Data handling
+  - Managing appointments or booking (if applicable)
+  - Storing and using data for customised solutions
+  - supporting digital contents delivery across various platforms/devices
+  - catering to different strategies for learning through diverse content
+  - Implementing gamified learning approaches
+  - Providing accessibility features
+  - Incorporating social learning through integration with social media APIs or developing a website that utilises a back-end database.
+- Risk Management
+  - Malicious or inappropriate use
+  - Data breaches
+  - Cross-site scripting
+  - SQL injection
+- Wider issues
+  - General issues such as privacy and potential user errors
+  - Specific issues relevant to your scenario
+  - Technical issues and guidlines that are relevant to software development and industrial context
+  - Laws, legislations & regulations that need to be adhered to
+- Current practices and emerging technology
+  - Apps and mobile devices
+  - Video or remote instruction
+  - Use of AR/VR technologies
+- Functional and Non-functional requirments
+  - Functional requirments
+  - Non-functional requirments
+  - KPI
+  - User acceptance criteria
+
 #### Design
 - Visual/Interface Designs
 - Data requirments
