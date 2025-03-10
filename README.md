@@ -275,5 +275,21 @@ foreach (DataRow dr in dt.Rows)
 #### Code
 - 2 laungages
 - Iterative Testing
+- Documentation
+  - Testing
+  - Assets
+### Task 3a
+#### Gathering feedback
+- Google forms
+- interviews
+- Report
+- Feedback plan
+### Task 3b
+#### Evaluation
+
+
+
+![image](https://github.com/user-attachments/assets/d792b82d-6e32-4deb-a20f-b28dbfd83fed)
+
 
 
