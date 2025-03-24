@@ -124,53 +124,7 @@ SqlConnection sqlConnection = new SqlConnection(ConnectionString);
 SqlCommand command = new SqlCommand("SaveForecast", sqlConnection);
 command.CommandType = CommandType.StoredProcedure;
 ```
-### API connection
-```C#
-private const string API_KEY = "b1fe4659e300363e368f4ce2cf007fac";
-location = txtCity.Text;
-WebClient client = new WebClient();
-string ForecastUrl =
-"http://api.openweathermap.org/data/2.5/forecast?" +
-"q=" + location + "&mode=xml&units=metric&APPID=" + API_KEY;
-txtCity.Clear();
-DisplayForecast(client.DownloadString(ForecastUrl));
-```
 
-### Output API data
-```C#
-DataTable dt = new DataTable();
-
-XmlDocument xmlDoc = new XmlDocument();
-xmlDoc.LoadXml(xml);
-
-XmlNode locNode = xmlDoc.SelectSingleNode("weatherdata/location");
-txtCity.Text = locNode.SelectSingleNode("name").InnerText;
-          
-dt.Columns.Add("Day");
-dt.Columns.Add("Time");
-dt.Columns.Add("Wind");
-dt.Columns.Add("Rain");
-dt.Columns.Add("Temperature");
-
-foreach (XmlNode timeNode in xmlDoc.SelectNodes("//time"))
-{
-    DateTime time =
-        DateTime.Parse(timeNode.Attributes["from"].Value);
-
-    XmlNode windNode = timeNode.SelectSingleNode("windSpeed");
-    string wind = windNode.Attributes["mps"].Value;
-
-    XmlNode TempNode = timeNode.SelectSingleNode("temperature");
-    string Temp = TempNode.Attributes["value"].Value;
-
-    XmlNode rainNode = timeNode.SelectSingleNode("precipitation");
-    string rain = rainNode.Attributes["probability"].Value;
-
-    dt.Rows.Add(time.DayOfWeek.ToString(), time.ToShortTimeString(), wind.ToString() + "m/s", rain.ToString() + "%", Temp.ToString() + "°C");
-
-    dataGridView1.DataSource = dt;
-
-```
 ### Data Table
 
 ```C#
