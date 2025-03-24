@@ -174,6 +174,51 @@ foreach (DataRow dr in dt.Rows)
 }
 
 ```
+
+### Login
+```
+        string username = txtUserName.Text;
+        string password = txtPassword.Text;
+        bool found = false;
+        
+        foreach (DataRow dr in dt.Rows)
+        {
+            if (username.Equals(dr["username"].ToString()))
+            {
+                if (password.Equals(dr["password"].ToString()))
+                {
+                    found = true;    
+                }
+                else
+                {                    
+                }
+            }
+            else
+            {
+                     
+            }
+            
+        }
+        if (found)
+        {
+            Passwords pass = new Passwords(this);
+            pass.ShowDialog();
+        }
+        else if (found == false)
+        {
+
+            MessageBox.Show("Username not found or Password is incorrect");
+
+        }
+
+    }
+    catch
+    {
+        MessageBox.Show("Error");
+    }
+}
+
+```
 #
 # Checklist
 ### Task 1
